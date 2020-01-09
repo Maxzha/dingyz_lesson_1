@@ -49,6 +49,8 @@ GIT:
 
 	git add 文件名
 	git rebase --continue  # rebase发生冲突时，解决冲突后，先add 在--continue 解决 
+	
+	git rebase -i  HEAD~数字 # 进行合并无用commit HEAD~数字参数选择需要合并的最近的commit 从提交时间早至晚排序 第一个无法合并(属于父节点)
 
 	git rebase --abort # 取消rebase
 
@@ -62,6 +64,8 @@ GIT:
 	# 如果克隆出错 输入 eval "$(ssh-agent -s)"
 			   ssh-add
  
+	git remote add origin git@github.com:用户名/远仓库名.git  #连接github远程仓库（前提已经建立了）	
+
 	git push -u origin 分支名  #提交本地分支到远程仓库 -u参数可以使下次提交简化为git push 即可
 
 	git remote set-url origin git@github.com:用户名/远程仓库名.git  #更改远程仓库链接方式 将https改为ssh
